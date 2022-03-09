@@ -70,6 +70,7 @@ var enemyInfo = [
 //fight or skip function
 var fightOrSkip = function() {
   //ask player if they'd like to fight or skip using fightOrSkip function
+  debugger
   var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
   //prevent blank or null
@@ -78,7 +79,7 @@ var fightOrSkip = function() {
     return fightOrSkip();
   }
 
-  promptFight = promptFight.toLowerCase
+  promptFight = promptFight.toLowerCase();
 
    // if player choses to skip
    if (promptFight === "skip") {
@@ -97,6 +98,7 @@ var fightOrSkip = function() {
       return true;
     }
   }
+  return false;
 }
 // fight function
 var fight = function(enemy) {
