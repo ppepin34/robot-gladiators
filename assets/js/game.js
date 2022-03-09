@@ -70,7 +70,7 @@ var enemyInfo = [
 //fight or skip function
 var fightOrSkip = function() {
   //ask player if they'd like to fight or skip using fightOrSkip function
-  debugger
+  //debugger
   var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
   //prevent blank or null
@@ -216,23 +216,23 @@ var endGame = function () {
 var shop = function() {
   //ask player what they'd like to do
   var shopOptionPrompt = window.prompt(
-    "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice."
+    "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one 1 for REFILL, 2 for UPGRADE, or 3 for LEAVE."
   );
-  switch (shopOptionPrompt) {
-    case "refill":
-    case "REFILL":
-      playerInfo.refillHealth();
 
+  //chang shopOptionPrompt to integer
+  shopOptionPrompt = parseInt(shopOptionPrompt);
+
+
+  switch (shopOptionPrompt) {
+    case 1:
+      playerInfo.refillHealth();
       break;
 
-  case "upgrade":
-  case "UPGRADE":
+  case 2:
     playerInfo.upgradeAttack();
-
     break;
 
-  case "LEAVE":
-  case "leave":
+  case 3:
     window.alert("Leaving the store.");
     break;
 
